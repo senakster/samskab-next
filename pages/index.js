@@ -9,13 +9,12 @@ export default function Home(props) {
   const {page} = props
   const {
     title,
+    hero,
     seo
   } = page || {}
-  console.log({props})
   return (
-    <div className={''}>
+    <div className={'col-span-full'}>
       <Seo {...{seo, title}} />
-      <Hero {...{title}} />
     </div>
   )
 }

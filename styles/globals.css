@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans
+    }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+    /* HEADINGS */ 
+    .nav-active {
+        @apply text-[24px] leading-[32px] font-medium
+    }
+    .heading-s {
+        @apply text-[20px] lg:text-[24px] leading-[28px] lg:leading-[40px] font-medium lg:font-bold
+    }
+    .heading-m {
+        @apply text-[24px] lg:text-[28px] leading-[32px] lg:leading-[36px] font-medium lg:font-bold
+    }
+    .heading-l {
+        @apply text-[28px] lg:text-[32px] leading-[36px] lg:leading-[48px] font-medium lg:font-bold
+    }
+    .body-lm {
+        @apply font-bread text-[16px] lg:text-[16px] leading-[24px] lg:leading-[24px] font-medium
+    }
+    .body-lr {
+        @apply font-bread text-[16px] lg:text-[16px] leading-[24px] lg:leading-[24px] font-normal
+    }
+    .body-r {
+        @apply font-bread text-[14px] lg:text-[15px] leading-[22px] lg:leading-[22px] font-normal
+    }
+}
