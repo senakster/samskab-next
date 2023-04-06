@@ -4,12 +4,14 @@
 
 @layer base {
     body {
-        @apply font-sans
+        @apply font-sans text-dark
     }
 }
 
 @layer components {
-
+    a:not(.dimmed) {
+        @apply inline-block relative after:block after:content-[''] after:absolute after:bottom-full h-[2px] w-full after:bg-current
+    }
 }
 
 @layer utilities {
