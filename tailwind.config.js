@@ -25,6 +25,9 @@ module.exports = {
         dark: '#748A93',
         contrast: '#5C3D00'
       },
+      red: {
+        DEFAULT: '#831618',
+      }
     }
   },
     extend: {

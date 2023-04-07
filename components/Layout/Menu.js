@@ -3,12 +3,15 @@ import FancyBurger from "@/components/ui/FancyBurger"
 import LanguageSwitch from "@/components/LanguageSwitch"
 import CLink from "../ui/CLink"
 import {useState} from 'react'
+import { useRouter } from "next/router"
 const Menu = (props) => {
     const {menu} = props
     const [active, setActive] = useState(false)
     const toggleActive = () => {
         setActive(!active)
     }
+    const router = useRouter()
+    console.log(router.asPath.toLowerCase())
     return (
         <div className="__Menu fixed py-4 top-0 left-0 h-10 w-full bg-transparent">
             <Container className="relative">
@@ -16,8 +19,8 @@ const Menu = (props) => {
                     <LanguageSwitch />
                     {menu?.map && <ul className="hidden lg:flex h-full gap-4 items-center">
                         {menu.map((m,i) => (
-                            <li key={i} className="">
-                                <CLink href={`/${m.slug}` || '/'}>{m.title}</CLink>
+                            <li key={i} className={`${router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}` ? 'text-red font-bold': ''}`}>
+                                <CLink active={router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}`} href={`/${m.slug.toLowerCase()}` || '/'}>{m.title}</CLink>
                             </li>
                         ))}
                     </ul> }
@@ -26,8 +29,8 @@ const Menu = (props) => {
                         <div className="absolute inset-0 bg-white opacity-90"></div>
                         {menu?.map && <ul className="flex flex-col gap-y-2 text-center">
                             {menu.map((m, i) => (
-                                <li key={i} className="">
-                                    <CLink href={`/${m.slug}` || '/'}>{m.title}</CLink>
+                                <li key={i} className={`heading-l ${router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}` ? 'text-red font-bold' : ''}`}>
+                                    <CLink active={router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}`} href={`/${m.slug.toLowerCase()}` || '/'}>{m.title}</CLink>
                                 </li>
                             ))}
                         </ul>}
