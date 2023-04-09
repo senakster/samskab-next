@@ -9,8 +9,11 @@
 }
 
 @layer components {
+    a.menu-link {
+        @apply 
+    }
     a:not(.dimmed) {
-        @apply inline-block relative after:block after:content-[''] after:absolute after:bottom-full h-[2px] w-full after:bg-current
+        @apply after:block after:content-[''] after:absolute after:bottom-full  after:bg-current
     }
 }
 

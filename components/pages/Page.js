@@ -1,9 +1,9 @@
 
 const Page = (props) => {
-    const {} = props
+    const {page} = props
     return (
         <div>
-            PAGE
+            {JSON.stringify(page)}
         </div>
     )
 }

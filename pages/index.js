@@ -4,6 +4,7 @@ import { getFrontpage } from '@/lib/sanity/queries';
 import { getClient } from '@/lib/sanity';
 import Hero from '@/components/Layout/Hero';
 import { filterDataToSingleItem } from '@/lib/sanity';
+import Frontpage from '../components/pages/Frontpage';
 // 
 export default function Home(props) {
   const {page} = props
@@ -15,6 +16,7 @@ export default function Home(props) {
   return (
     <div className={'col-span-full'}>
       <Seo {...{seo, title}} />
+      <Frontpage {...page} />
     </div>
   )
 }

@@ -10,7 +10,7 @@ import App from 'next/app'
 function CustomApp({ Component, pageProps, settings }) {
   const {page} = pageProps 
   return (
-  <Layout {...{hero: page?.hero, settings}}>
+  <Layout {...{hero: page?.hero, settings, page}}>
     <Component {...pageProps} />
   </Layout>
   )

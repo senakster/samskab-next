@@ -5,7 +5,7 @@ import { getClient, filterDataToSingleItem } from '@/lib/sanity'
 const Slug = (props) => {
     console.log('SLUG: ', {props})
     return (
-        <Page />
+        <Page {...props} />
     )
 }
 
@@ -25,7 +25,7 @@ export async function getStaticProps(props) {
     const { params, preview = false } = props;
 
     const query = getPageBySlug
-    const queryParams = { ...params };
+    const queryParams = { slug: params.slug[params.slug.length -1] };
     const data = await getClient(preview).fetch(query, queryParams);
     const page = filterDataToSingleItem(data, preview);
 

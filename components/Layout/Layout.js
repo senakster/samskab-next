@@ -9,10 +9,11 @@ const Layout = (props) => {
         hero,
         children,
     } = props
+    // console.log({props})
     return (
-        <div className="__LAYOUT">
+        <div className="__LAYOUT pt-20">
             <Menu {...settings.find(s => s?.__i18n_lang === router.locale)}/>
-            <Hero {...hero} />
+            {hero && <Hero {...hero} />}
             <Container>
             {children}
             </Container>
