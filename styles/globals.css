@@ -40,4 +40,7 @@
     .body-r {
         @apply font-bread text-[14px] lg:text-[15px] leading-[22px] lg:leading-[22px] font-normal
     }
+    .text-shadow {
+        text-shadow: 0 0 0.2em #000;
+    }
 }

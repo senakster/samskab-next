@@ -4,7 +4,7 @@ import '@/styles/globals.css'
 import '@/styles/fonts.css'
 import Layout from '@/components/Layout'
 import { getSettings } from '@/lib/sanity/queries'
-import { getClient, filterDataToSingleItem } from '@/lib/sanity'
+import { getClient} from '@/lib/sanity'
 
 import App from 'next/app'
 function CustomApp({ Component, pageProps, settings }) {

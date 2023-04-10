@@ -16,7 +16,7 @@ const Menu = (props) => {
         setActive(!active)
     }
     const router = useRouter()
-    console.log({props})
+    // console.log({props})
     return (
         <div className="__Menu absolute top-0 left-0 h-20 w-full">
             <div className="absolute __BGCOLOR h-full -w-full w-full bg-white lg:bg-transparent"></div>
@@ -24,12 +24,12 @@ const Menu = (props) => {
                 <nav className="col-span-full flex justify-between items-center mt-4">
                     <div className="w-32"></div>
                     <Link href="/" className="w-32 fixed top-0 left-0 h-20"><div className="w-32"><div className="sr-only">Forsidelink</div>
-                    <CImage {...logo} />
+                    <CImage {...logo} altText="Samskab Logo"/>
                     {/* <Image className="object-contain" fill src={logo} alt="Samskab Logo" /> */}
                     </div></Link>
                     {menu?.map && <ul className="hidden lg:flex h-full pt-3 gap-4 items-center">
                         {menu.map((m,i) => (
-                            <li key={i} className={`${router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}` ? 'text-red font-bold': ''}`}>
+                            <li key={i} className={`${router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}` ? 'text-red': ''}`}>
                                 <CLink active={router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}`} href={`/${m.slug.toLowerCase()}` || '/'}>{m.title}</CLink>
                             </li>
                         ))}
@@ -40,7 +40,7 @@ const Menu = (props) => {
                         <div className="absolute inset-0 bg-white opacity-90 -z-10"></div>
                         {menu?.map && <ul className="flex flex-col gap-y-2 text-center">
                             {menu.map((m, i) => (
-                                <li key={i} className={`heading-l ${router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}` ? 'text-red font-bold' : ''}`}>
+                                <li key={i} className={`heading-l ${router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}` ? 'text-red' : ''}`}>
                                     <CLink active={router.asPath.toLowerCase() === `/${m.slug.toLowerCase()}`} href={`/${m.slug.toLowerCase()}` || '/'}>{m.title}</CLink>
                                 </li>
                             ))}

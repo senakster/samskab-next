@@ -3,7 +3,7 @@ import { getAllPagePaths, getPageBySlug } from '@/lib/sanity/queries'
 import { getClient, filterDataToSingleItem } from '@/lib/sanity'
 
 const Slug = (props) => {
-    console.log('SLUG: ', {props})
+    // console.log('SLUG: ', {props})
     return (
         <Page {...props} />
     )

@@ -6,7 +6,7 @@ const blockTypes = { // groq._ref-> Expanded / altered _type - check
 
 const ContentBlocks = (props) => {
     const {content} = props
-    console.log({Blocks})
+    // console.log({content})
     return (
         <section className="__CONTENTBLOCKS">
             {

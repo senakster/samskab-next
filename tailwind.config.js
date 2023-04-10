@@ -30,8 +30,7 @@ module.exports = {
       }
     }
   },
-    extend: {
-
+  extend: {
   },
   plugins: [
     // require('tailwind-scrollbar-hide')
