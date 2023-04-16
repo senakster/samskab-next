@@ -81,11 +81,11 @@ const baseSerializers = {
     list: {
         bullet: (props) => {
             const { children, value, index } = props;
-            return <ul className="list-disc pl-6 mb-4">{children}</ul>;
+            return <ul className="body-lr list-disc pl-6 mb-4">{children}</ul>;
         },
         number: (props) => {
             const { children } = props;
-            return <ul className="list-dec pl-6 mb-4">{children}</ul>;
+            return <ol className="body-lr list-decimal pl-6 mb-4">{children}</ol>;
         }
     }
 };

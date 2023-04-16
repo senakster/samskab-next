@@ -4,11 +4,11 @@ const Page = ({page}) => {
     // console.log({page})
     return (
         <div className="__PAGE">
-            <header>
+            <header className='text-center mt-6'>
                 <h1 className="text-4xl uppercase">{title}</h1>
             </header>
             <div>
-                <ContentBlocks blocks={content}/>
+                <ContentBlocks {...{content}}/>
             </div>
         </div>
     )
